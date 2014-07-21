@@ -40,17 +40,17 @@ License (MIT license):
   THE SOFTWARE.
 
 */
-#ifndef CC3000_MDNS_H
-#define CC3000_MDNS_H
+#ifndef COLORRING_CC3000_MDNS_H
+#define COLORRING_CC3000_MDNS_H
 
-#include "Adafruit_CC3000.h"
+#include "ColorRing_CC3000.h"
 #include "utility/socket.h"
 
 class MDNSResponder {
 public:
   MDNSResponder();
   ~MDNSResponder();
-  bool begin(const char* domain, Adafruit_CC3000& cc3000, uint32_t ttlSeconds = 3600);
+  bool begin(const char* domain, ColorRing_CC3000& cc3000, uint32_t ttlSeconds = 3600);
   void update();
 
 private:

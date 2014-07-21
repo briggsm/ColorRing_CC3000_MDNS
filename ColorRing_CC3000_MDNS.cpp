@@ -29,7 +29,7 @@ License (MIT license):
 // - DNS request and response: http://www.ietf.org/rfc/rfc1035.txt
 // - Multicast DNS: http://www.ietf.org/rfc/rfc6762.txt
 
-#include "CC3000_MDNS.h"
+#include "ColorRing_CC3000_MDNS.h"
 
 #define READ_BUFFER_SIZE 20
 #define HEADER_SIZE 12
@@ -58,7 +58,7 @@ MDNSResponder::~MDNSResponder() {
   }
 }
 
-bool MDNSResponder::begin(const char* domain, Adafruit_CC3000& cc3000, uint32_t ttlSeconds)
+bool MDNSResponder::begin(const char* domain, ColorRing_CC3000& cc3000, uint32_t ttlSeconds)
 { 
   // Construct DNS request/response fully qualified domain name of form:
   // <domain length>, <domain characters>, 5, "local"
